@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Transaction;
 use App\Models\User as ModelsUser;
 use Exception;
@@ -75,4 +76,5 @@ class WalletController extends Controller
             return ["error" => $e->getMessage()];
         }
     }
+
 }

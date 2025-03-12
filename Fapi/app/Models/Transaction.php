@@ -18,4 +18,5 @@ class Transaction extends Model
          'motif',
 
     ];
+
 }
