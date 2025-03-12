@@ -10,7 +10,7 @@ class Transaction extends Model
     use HasFactory;
   
     protected $fillable=[
-         'reseaverEmail',
+         'recieverEmail',
          'senderEmail',
          'date',
          'status',
