@@ -20,8 +20,13 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'password',
+        'password'
     ];
+    
+
+    public function wallet(){
+        return $this->hasone(Wallet::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
