@@ -13,8 +13,18 @@ use Illuminate\Support\Facades\DB;
 class WalletController extends Controller
 {
     
+     public function deposit(){
+        $user=ModelsUser::find(1);
+        try{
 
-    
+            $user->wallet->balance += 1000;
+        }catch(Exception $e){
+            return [$e];
+
+        }
+
+     }
+
 
     public function transact(Request $request)
     {
@@ -71,7 +81,7 @@ class WalletController extends Controller
             return [$Transaction];
             
         }
-        } catch(Exception $e) {
+        } catch(Exception $e) {  
             return ["error" => $e->getMessage()];
         }
     }

@@ -35,3 +35,4 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     });
 
 Route::post('/transact', [WalletController::class, 'transact']);
+Route::post('/deposit',[WalletController::class,'deposit']);
